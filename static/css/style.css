@@ -1,0 +1,199 @@
+div.row {
+    margin-top: 2vw;
+}
+
+h1.title {
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 6vw;
+    font-family: 'Arimo', sans-serif;
+    font-size: 2rem;
+    width: 45%;
+    font-weight: bold;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-color:#931120;
+    color: white;
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+    font-size: 1rem;
+    padding-top: 0.5rem;
+}
+
+a.navbar-brand {
+    margin-left: 1vw;
+}
+
+a.nav-link {
+    color: white;
+    font-family: 'Arimo', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 1vw;
+}
+
+p {
+    display: inline;
+}
+
+
+img.img-background {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+div.banner {
+    background-color: white;
+    opacity: 0.6;
+    margin-top: 5.5vw;
+    padding: 7.5vw;
+    position: absolute;
+    left: 0;
+}
+
+div.inner-banner {
+    opacity: 1;
+    margin-top: 8.5vw;
+    z-index: 1;
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+    font-size: 1.25em;
+}
+
+button.apply-btn {
+    display: inner-block;
+    margin-top: 1.2vw;
+    align-items: center;
+    appearance: none;
+    background-color: #1F4C4C;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#193d3d 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "Arimo", sans-serif;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding: 1vw;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+button.apply-btn:focus {
+    box-shadow: #193d3d 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #193d3d 0 -3px 0 inset;
+}
+
+button.apply-btn:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #193d3d 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+button.apply-btn:active {
+    box-shadow: #193d3d 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+
+/* reference: https://www.30secondsofcode.org/css/s/hover-underline-animation */
+a.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+  
+a.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.2vw;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+a.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+
+div.home-description {
+    font-family: 'Arimo', sans-serif;
+    font-size: 1em;
+    width: 65%;
+    margin: auto;
+    margin-top: 10vw;
+}
+
+ul {
+    display: inline-block;
+}
+
+li {
+    margin: 2vw;
+}
+
+div#testimonialIndicators {
+    margin-bottom: 10vw;
+}
+
+h2.testimonial-title {
+    font-family: 'Arimo', sans-serif;
+    font-size: 1.3rem;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 2vw;
+}
+
+img.testimonial-img {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1vw;
+    margin-top: -10vw;
+}
+
+.carousel-control-next, .carousel-control-prev, .carousel-indicators {
+    filter: invert(100%);
+}
+
+div.testimonial-text {
+    font-family: 'Arimo', sans-serif;
+    width: 60%;
+    display: inline-block;
+    height: 15vw;
+    margin-bottom: 5vw;
+}
+
+div.testimonial-card {
+    border: 1px solid #ddd;
+    padding-top: 2vw;
+    height: 20vw;
+    text-align: center;
+}
