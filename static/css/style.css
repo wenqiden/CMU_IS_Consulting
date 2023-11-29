@@ -278,6 +278,12 @@ button#filter-btn:hover {
     box-shadow: 0 0 0 0.1rem rgba(131, 131, 131, 0.25);
 }
 
+div#project-main-container {
+    z-index: 0;
+    filter: blur(0px);
+}
+
+
 div.logos-container {
     text-align: center;
     display: block;
@@ -307,11 +313,13 @@ img.logo {
 div.filter-list {
     width: 40vw;
     position: fixed;
-    height: 90.5vh;
+    height: 85vh;
     float: left;
     background-color: rgba(255, 255, 255, 0.7);
     overflow: scroll;
     margin-top: 5vh;
+    z-index: 1;
+    display: none;
 }
 
 h4.filter-title {
@@ -357,6 +365,7 @@ input.goal-input {
 div.placeholder {
     margin-top: 2vw;
 }
+
 
 /* Steve-Stuff */
 

@@ -24,7 +24,7 @@
     
     <!-- Custom styles for this template -->
     <link href="./static/css/style.css" rel="stylesheet">
-    <script defer src="./static/js/script.js"></script>
+    <script defer src="./static/js/project_filter_script.js"></script>
 
 
 </head>
@@ -53,7 +53,7 @@
 </header>
 
 <body id="homeBody">
-    <div class="container filter-list">
+    <div class="container filter-list" id="filter-list">
         <h4 class="filter-title">View</h4>
         <label class="view"><input class="view-input" type="radio" name="view-type" value="tile" checked >Tile</label>
         <label class="view"><input class="view-input" type="radio" name="view-type" value="row">Row</label>
@@ -106,7 +106,7 @@
         <label class="goal"><input class="goal-input" type="checkbox" checked >14. Web App</label>
         <div class="placeholder"></div>
     </div>
-    <div class="container">
+    <div class="container" id="project-main-container">
         <div class="row titles">
             <h1 class="display-1 title">Projects</h1>
             <h2 class="display-4 subtitle">This page displays past projects for CMU Consulting Project at the Information Systems Department.</h2>
@@ -134,7 +134,7 @@
         </div>
         <div class="row">
             <div class="project-btn-container">
-                <button class="apply-btn">Apply to be a Partner</button>
+                <a href="becomepartner.html"><button class="apply-btn" style="background-color: #008F91">Apply to be a Partner</button></a>
             </div>
         </div>
     </div>
