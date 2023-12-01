@@ -280,7 +280,6 @@ button#filter-btn:hover {
 
 div#project-main-container {
     z-index: 0;
-    filter: blur(0px);
 }
 
 
@@ -351,6 +350,11 @@ input.year-input {
     margin-right: 0.5vw;
 }
 
+input.year-input-all {
+    margin-right: 0.5vw;
+    margin-bottom: 0.5vw;
+}
+
 label.goal {
     margin-left: 1vw;
     margin-bottom: 0.5vw;
@@ -362,9 +366,42 @@ input.goal-input {
     margin-right: 0.5vw;
 }
 
+
+label.tech {
+    margin-left: 1vw;
+    margin-bottom: 0.5vw;
+    display: block;
+}
+
+
+input.tech-input {
+    margin-right: 0.5vw;
+}
+
 div.placeholder {
     margin-top: 2vw;
 }
+
+
+@keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+  
+  @keyframes fade-in {
+      100% {
+        opacity: 1;
+        filter: blur(0);
+      }
+  }
+  
 
 
 /* Steve-Stuff */
@@ -383,4 +420,56 @@ div.placeholder {
     margin-left: auto; /* Keeps the element centered horizontally */
     margin-right: auto; /* Keeps the element centered horizontally */
     max-width: 80%; /* Adjust the maximum width as needed to maintain a good layout */
+}
+
+input.goal-input-all {
+    margin-right: 0.5vw;
+}
+
+input.tech-input-all {
+    margin-right: 0.5vw;
+}
+
+
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+  
+  @keyframes fade-in {
+      100% {
+        opacity: 1;
+        filter: blur(0);
+      }
+  }
+  
+h5#typewrite {
+    width: max-content;
+    padding: 0.1vw;
+    display: block;
+    animation: blink .5s step-end infinite alternate;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.2vw solid;
+    margin: auto;
+}
+
+img.scotty-left {
+    float: left;
+    width: 10vw;
+    transform: scaleX(-1);
+    margin-left: 10vw;
+    filter: blur(4px);
+    animation: transform 0.75s forwards, fade-in 0.5s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    animation-delay: 0.3s;
+}
+
+img.scotty-right {
+    float: right;
+    width: 10vw;
+    filter: blur(4px);
+    margin-right: 10vw;
+    animation: transform 0.75s forwards, fade-in 0.5s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    animation-delay: 0.3s;
 }

@@ -7,10 +7,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Manuale" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -58,6 +54,8 @@
         <label class="view"><input class="view-input" type="radio" name="view-type" value="tile" checked >Tile</label>
         <label class="view"><input class="view-input" type="radio" name="view-type" value="row">Row</label>
         <h4 class="filter-title">Years</h4>
+        <label class="year"><input class="year-input-all" id="year-all" type="checkbox" checked >Select all</label>
+        <br>
         <label class="year"><input class="year-input" type="checkbox" checked >2023</label>
         <label class="year"><input class="year-input" type="checkbox" checked >2022</label>
         <label class="year"><input class="year-input" type="checkbox" checked >2021</label>
@@ -69,6 +67,7 @@
         <label class="year"><input class="year-input" type="checkbox" checked >2015</label>
         
         <h4 class="filter-title">Sustainable Development Goal</h4>
+        <label class="goal"><input class="goal-input-all" id="goal-all" type="checkbox" checked >Select all</label>
         <label class="goal"><input class="goal-input" type="checkbox" checked >1. CleanEnergy</label>
         <label class="goal"><input class="goal-input" type="checkbox" checked >2. CleanWater</label>
         <label class="goal"><input class="goal-input" type="checkbox" checked >3. ClimateAction</label>
@@ -89,20 +88,21 @@
         <label class="goal"><input class="goal-input" type="checkbox" checked >18. Zero Hunger</label>
 
         <h4 class="filter-title">Technology Implemented</h4>
-        <label class="goal"><input class="goal-input" type="checkbox" checked >1. API</label>
-        <label class="goal"><input class="goal-input" type="checkbox" checked >2. Application Integration</label>
-        <label class="goal"><input class="goal-input" type="checkbox" checked >3. CRM</label>
-        <label class="goal"><input class="goal-input" type="checkbox" checked >4. Data Analytics</label>
-        <label class="goal"><input class="goal-input" type="checkbox" checked >5. Database Solution</label>
-        <label class="goal"><input class="goal-input" type="checkbox" checked >6. Geographic Information System</label>
-        <label class="goal"><input class="goal-input" type="checkbox" checked >7. Information Kiosk</label>
-        <label class="goal"><input class="goal-input" type="checkbox" checked >8. Information Security & Risk</label>
-        <label class="goal"><input class="goal-input" type="checkbox" checked >9. Mobile App</label>
-        <label class="goal"><input class="goal-input" type="checkbox" checked >10. Social Media</label>
-        <label class="goal"><input class="goal-input" type="checkbox" checked >11. Software Integration</label>
-        <label class="goal"><input class="goal-input" type="checkbox" checked >12. Technology Strategy</label>
-        <label class="goal"><input class="goal-input" type="checkbox" checked >13. User Experience</label>
-        <label class="goal"><input class="goal-input" type="checkbox" checked >14. Web App</label>
+        <label class="tech"><input class="tech-input-all" id="tech-all" type="checkbox" checked >Select all</label>
+        <label class="tech"><input class="tech-input" type="checkbox" checked >1. API</label>
+        <label class="tech"><input class="tech-input" type="checkbox" checked >2. Application Integration</label>
+        <label class="tech"><input class="tech-input" type="checkbox" checked >3. CRM</label>
+        <label class="tech"><input class="tech-input" type="checkbox" checked >4. Data Analytics</label>
+        <label class="tech"><input class="tech-input" type="checkbox" checked >5. Database Solution</label>
+        <label class="tech"><input class="tech-input" type="checkbox" checked >6. Geographic Information System</label>
+        <label class="tech"><input class="tech-input" type="checkbox" checked >7. Information Kiosk</label>
+        <label class="tech"><input class="tech-input" type="checkbox" checked >8. Information Security & Risk</label>
+        <label class="tech"><input class="tech-input" type="checkbox" checked >9. Mobile App</label>
+        <label class="tech"><input class="tech-input" type="checkbox" checked >10. Social Media</label>
+        <label class="tech"><input class="tech-input" type="checkbox" checked >11. Software Integration</label>
+        <label class="tech"><input class="tech-input" type="checkbox" checked >12. Technology Strategy</label>
+        <label class="tech"><input class="tech-input" type="checkbox" checked >13. User Experience</label>
+        <label class="tech"><input class="tech-input" type="checkbox" checked >14. Web App</label>
         <div class="placeholder"></div>
     </div>
     <div class="container" id="project-main-container">
@@ -112,7 +112,7 @@
         </div>
         <div class="row search-container">
             <div class="search">
-            <input class="search-bar" type="text" placeholder="Search for a project...">
+            <input class="search-bar" type="text" placeholder="Search for a project by project or student name...">
             <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
             </div>
         </div>
@@ -121,7 +121,7 @@
         </div>
         <div class="row logos-container">
             <div class="logos">
-                <a href="https://cmuisprojects.org/PDFs/s23/412Connect.pdf"><img class="logo" src="./static/img/logos/412connect.png"></a>
+                <a data-bs-toggle="modal" href="#exampleModal"><img class="logo" src="./static/img/logos/412connect.png"></a>
                 <a href="https://cmuisprojects.org/PDFs/s23/Amachi.pdf"><img class="logo" src="./static/img/logos/amachi.png"></a>
                 <a href="https://cmuisprojects.org/PDFs/s23/BCAP.pdf"><img class="logo" src="./static/img/logos/bcap.png"></a>
                 <a href="https://cmuisprojects.org/PDFs/s23/CSP.pdf"><img class="logo" src="./static/img/logos/cfsp.png"></a>
@@ -131,6 +131,27 @@
                 <a href="https://cmuisprojects.org/PDFs/s23/FAAP.pdf"><img class="logo" src="./static/img/logos/faap.png"></a>
             </div>
         </div>
+        <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">412Connect</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img style="width: 10vw;" src="./static/img/logos/412connect.png">
+                    <h2 style="font-size: 1.5rem;">Project Description</h2>
+                    <p>412Connect aims to showcase organizations from marginalized communities to local university students through an online scavenger hunt. The CMU IS student team primarily worked on addressing the current pain points of the website by redesigning the user dashboard, revamping the user authentication process, and remodeling user feedback collection. These changes should create a more intuitive user experience that helps the platform better retain students down the line.</p>
+                    <h2 style="font-size: 1.5rem; margin-top: 2vw;">Student Development Team</h2>
+                    <p>Danagul Azimzhanova, Jacky He, Kevin Lin, Eric Rohrer</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <a href="https://cmuisprojects.org/PDFs/s23/412Connect.pdf"><button type="button" class="btn btn-primary" style="border-color:#931120; background-color: #931120;">More Info</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
         <div class="row">
             <div class="project-btn-container">
                 <a href="becomepartner.html"><button class="apply-btn" style="background-color: #008F91">Apply to be a Partner</button></a>

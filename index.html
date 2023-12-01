@@ -7,10 +7,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Manuale" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -24,7 +20,8 @@
     
     <!-- Custom styles for this template -->
     <link href="./static/css/style.css" rel="stylesheet">
-    <script defer src="./static/js/script.js"></script>
+    <script defer src="./static/js/carousel_switching.js"></script>
+    <script defer src="./static/js/type_writer.js"></script>
 
 
 </head>
@@ -62,7 +59,9 @@
             <div class="banner">
             </div>
                 <div class="inner-banner">
-                <p>Want to work with <p style="font-weight:bold;">top students</p> at <p style="font-weight:bold;">zero cost</p>?<br>Join us as a community partner.<br></p>
+                <img class="scotty-left" src="./static/img/cmu-scotty.png" alt="CMU scotty">
+                <img class="scotty-right" src="./static/img/cmu-scotty.png" alt="CMU scotty">
+                <div style="display: block; text-align:center;"> <h5 id="typewrite"></h5><h5 id="join">Join us as a community partner.<h5></div>
                 <a href="becomepartner.html"><button class="apply-btn">Apply to be a Partner</button></a>
                 </div>
         </div>
@@ -97,11 +96,11 @@
                 </div>
 
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialIndicators" data-bs-slide="prev">
+                <button id="carousel-pre" class="carousel-control-prev" type="button" data-bs-target="#testimonialIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#testimonialIndicators" data-bs-slide="next">
+                <button id="carousel-next" class="carousel-control-next" type="button" data-bs-target="#testimonialIndicators" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
                 </button>
